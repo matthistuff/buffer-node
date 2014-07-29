@@ -4,6 +4,5 @@
   "indent": 2,
   "undef": true,
   "unused": true,
-  "strict": true,
   "asi": true
 }
