@@ -9,7 +9,7 @@ buffer-node is a Node.js API Client for [Buffer](https://bufferapp.com/app)
 ## Usage
 Buffer-node offers an easy to use wrapper for the [Buffer API](https://bufferapp.com/developers/api).
 
-* *Example:**
+**Example:**
 ```js
 var bufferAPI = require('buffer-node'),
   api = bufferAPI('{{user access token}}')
