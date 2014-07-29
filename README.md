@@ -23,7 +23,7 @@ api.user.get().then(function(response) {
 Buffer uses OAuth 2.0 for authorization. It is recommended to use a library such as [Passport](http://passportjs.org) to authorize and retrieve an access token for the user.
 
 ### API client creation
-When requiring the buffer-node module, a factory function for the API client will be returned. Simply pass an access token and the ready to use client will be returned.
+When requiring the buffer-node module, a factory function for the API client will be exposed. Simply pass an access token and the ready to use client will be returned.
 
 ```js
 var bufferAPI = require('buffer-node'),
