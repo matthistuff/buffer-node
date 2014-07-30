@@ -72,15 +72,7 @@ api.profile('<profile ID>').schedules.get()
 
 Update schedules.
 
-* **schedules** array of schedules
-  ```js
-  [
-    {
-      days: ['mon', 'fri']
-      times: ['08:00', '15:00']
-    }
-  ]
-  ```
+* **schedules** array of schedules ```[{days: ['mon', 'fri'], times: ['08:00', '15:00']}]```
 
 ```js
 api.profile('<profile ID>').schedules.update(schedules)
@@ -105,7 +97,7 @@ api.profile('<profile ID>').updates.sent(options)
 
 Reorder updates for a single social media profile
 
-* **order** Array of update IDs
+* **order** Array of update IDs ```['4eb854340acb04e870000010', '4eb9276e0acb04bb81000067']```
 * **options** offset, utc
 
 ```js
