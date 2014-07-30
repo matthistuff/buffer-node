@@ -102,6 +102,7 @@ Reorder updates for a single social media profile
 
 ```js
 api.profile('<profile ID>').updates.reorder(order, options)
+```
 
 Retrieve a single update.
 
