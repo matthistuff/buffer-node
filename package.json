@@ -31,6 +31,8 @@
   },
   "devDependencies": {
     "chai": "^1.9.1",
+    "codeclimate-test-reporter": "0.0.3",
+    "istanbul": "^0.3.0",
     "mocha": "^1.21.1",
     "sinon": "^1.10.3"
   }

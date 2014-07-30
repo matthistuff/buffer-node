@@ -1,3 +1,9 @@
 language: node_js
 node_js:
   - 0.10
+addons:
+  code_climate:
+    repo_token: 34ebc7d457d854f8142fd6ab9c855e8834745e59354c8fd73d13507070b580f3
+after_script:
+  - ./node_modules/.bin/istanbul cover tests/*.js
+  - cat coverage/lcov.info | ./node_modules/.bin/codeclimate
