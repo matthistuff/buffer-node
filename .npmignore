@@ -1,5 +1,13 @@
-tests
 node_modules
+npm-debug.log
+
+tests
+coverage
+
+.travis.yml
+.istanbul.yml
+.jshintrc
+.jshintignore
+
 .idea
 test.js
-coverage
