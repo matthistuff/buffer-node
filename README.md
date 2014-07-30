@@ -41,7 +41,9 @@ var bufferAPI = require('buffer-node'),
 API requests always return a promise using the [promise](https://www.npmjs.org/package/promise) module. You should then use one of the supplied methods to handle successful calls and errors.
 
 ## API functions
-The API client completely covers the available Buffer API endpoints. Some methods can take optional parameters as an object. The keys correspond to the parameter names specified in the [API documentation](https://bufferapp.com/developers/api).
+The API client completely covers the available Buffer API endpoints. Some methods can take optional parameters as an object. The keys and values correspond to the parameter specified in the [API documentation](https://bufferapp.com/developers/api).
+
+When passing dates, the API client will automatically convert JavaScript Date instances to the right format.
 
 ### User
 Retrieve a single Buffer user account.
@@ -101,7 +103,7 @@ Retrieve a single update.
 api.update('<update ID>').get()
 ```
 
-Retrieve social media interaction for a single update
+Retrieve social media interaction for a single update.
 
 * **event** type of event
 * **options** count, page
@@ -110,7 +112,7 @@ Retrieve social media interaction for a single update
 api.update('<update ID>').interactions(event, options)
 ```
 
-Reorder updates for a single social media profile
+Reorder updates for a single social media profile.
 
 * **order** Array of update IDs
 * **options** offset, utc
@@ -119,7 +121,7 @@ Reorder updates for a single social media profile
 api.profile('<profile ID>').updates.reorder(order, options)
 ```
 
-Shuffle updates for a single social media profile
+Shuffle updates for a single social media profile.
 
 * **options** count, utc
 
@@ -127,7 +129,7 @@ Shuffle updates for a single social media profile
 api.profile('<profile ID>').updates.shuffle(options)
 ```
 
-Create a new update
+Create a new update.
 
 * **text** Update text
 * **profileIds** Array of profile IDs
@@ -137,7 +139,7 @@ Create a new update
 api.updates.create(text, profileIds, options)
 ```
 
-Modify an existing update
+Modify an existing update.
 
 * **text** Update text
 * **options** now, media, utc, scheduled_at
@@ -146,20 +148,36 @@ Modify an existing update
 api.update('<update ID>').update(text, options)
 ```
 
-Immediately share an existing update
+Immediately share an existing update.
 
 ```js
 api.update('<update ID>').share()
 ```
 
-Delete an existing update
+Delete an existing update.
 
 ```js
 api.update('<update ID>').destroy()
 ```
 
-Move an existing update to the top of the buffer queue
+Move an existing update to the top of the Buffer queue.
 
 ```js
 api.update('<update ID>').moveToTop()
+```
+
+### Links
+Get number of shares for a link on Buffer.
+
+* **url** URL of the link
+
+```
+api.links.shares(url)
+```
+
+### Info
+Get configuration Buffer is using for its social media profiles.
+
+```js
+api.info.configuration()
 ```
