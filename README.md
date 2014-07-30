@@ -95,15 +95,6 @@ Retrieve sent updates for a social media profile.
 api.profile('<profile ID>').updates.sent(options)
 ```
 
-Reorder updates for a single social media profile
-
-* **order** Array of update IDs ```['4eb854340acb04e870000010', '4eb9276e0acb04bb81000067']```
-* **options** offset, utc
-
-```js
-api.profile('<profile ID>').updates.reorder(order, options)
-```
-
 Retrieve a single update.
 
 ```js
@@ -112,9 +103,63 @@ api.update('<update ID>').get()
 
 Retrieve social media interaction for a single update
 
+* **event** type of event
 * **options** count, page
 
 ```js
 api.update('<update ID>').interactions(event, options)
 ```
 
+Reorder updates for a single social media profile
+
+* **order** Array of update IDs
+* **options** offset, utc
+
+```js
+api.profile('<profile ID>').updates.reorder(order, options)
+```
+
+Shuffle updates for a single social media profile
+
+* **options** count, utc
+
+```js
+api.profile('<profile ID>').updates.shuffle(options)
+```
+
+Create a new update
+
+* **text** Update text
+* **profileIds** Array of profile IDs
+* **options** shorten, now, top, media, attachment, scheduled_at
+
+```js
+api.updates.create(text, profileIds, options)
+```
+
+Modify an existing update
+
+* **text** Update text
+* **options** now, media, utc, scheduled_at
+
+```js
+api.update('<update ID>').update(text, options)
+```
+
+Immediately share an existing update
+
+```js
+api.update('<update ID>').share()
+```
+
+Delete an existing update
+
+```js
+api.update('<update ID>').destroy()
+```
+
+Move an existing update to the top of the buffer queue
+
+```js
+api.update('<update ID>').moveToTop()
+```
