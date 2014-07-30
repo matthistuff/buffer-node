@@ -3,7 +3,8 @@ node_js:
   - '0.10'
 addons:
   code_climate:
-    repo_token: 34ebc7d457d854f8142fd6ab9c855e8834745e59354c8fd73d13507070b580f3
+    repo_token:
+      secure: "Ud+b27I23u9V21IK9fBgagZTNf5gXbMz2kz+ZKxxrBa5Z9O1i9IBrqi7O3zHZdnwUekztWIv4ZogMpkHXV7apHQr8uwEqMLVaOaKJZMbRaXOh8kU55IyOXm/FXrL73a9dH0pE+TYjwym8ZfwEBdcmy/N4I50X8YM9gXo7hlxpHk="
 after_script:
   - ./node_modules/.bin/istanbul cover tests/*.js
   - cat coverage/lcov.info | ./node_modules/.bin/codeclimate
