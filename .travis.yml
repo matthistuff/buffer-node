@@ -6,5 +6,5 @@ addons:
     repo_token:
       secure: "Ud+b27I23u9V21IK9fBgagZTNf5gXbMz2kz+ZKxxrBa5Z9O1i9IBrqi7O3zHZdnwUekztWIv4ZogMpkHXV7apHQr8uwEqMLVaOaKJZMbRaXOh8kU55IyOXm/FXrL73a9dH0pE+TYjwym8ZfwEBdcmy/N4I50X8YM9gXo7hlxpHk="
 after_script:
-  - ./node_modules/.bin/istanbul cover tests/*.js
+  - ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- -u exports -R spec tests/*.js
   - cat coverage/lcov.info | ./node_modules/.bin/codeclimate
