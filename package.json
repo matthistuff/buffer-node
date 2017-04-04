@@ -2,7 +2,7 @@
   "name": "buffer-node",
   "description": "API client for bufferapp.com",
   "homepage": "https://github.com/matthistuff/buffer-node",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "./lib/buffer-api",
   "author": {
     "email": "mail@matthiasthiel.com",

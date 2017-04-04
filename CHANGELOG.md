@@ -1,3 +1,12 @@
+<a name="1.0.4"></a>
+## 1.0.4 (2017-04-04)
+
+* Safe deps version ([0d6f315](https://github.com/matthistuff/buffer-node/commit/0d6f315))
+* Update dependencies ([62c29bb](https://github.com/matthistuff/buffer-node/commit/62c29bb))
+* Use specific lodash dependencies ([0c4f435](https://github.com/matthistuff/buffer-node/commit/0c4f435))
+
+
+
 <a name="1.0.3"></a>
 ## 1.0.3 (2017-04-04)
 
