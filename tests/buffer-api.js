@@ -91,6 +91,7 @@ describe('bufferAPI core functions', function () {
       },
       function (err) {
         expect(err).to.be.an.instanceof(Error)
+        expect(err.message).to.equal('The endpoint you requested was not found.')
         expect(err.httpCode).to.equal(404)
         expect(err.errorCode).to.equal(404)
 
@@ -98,4 +99,56 @@ describe('bufferAPI core functions', function () {
       }
     )
   })
+
+  it('returns an error for an http error code with message', function (done) {
+    this.api.runRequest.restore();
+    sinon.stub(this.api, 'runRequest', function (options, callback) {
+      callback(null, {statusCode: 400}, JSON.stringify(
+        {
+          "success":false,
+          "message":"Must provide a photo media parameter for all Instagram service profiles",
+          "code":1004
+        }
+      ))
+    })
+
+    this.api.createRequest('get', 'test').then(
+      function () {
+      },
+      function (err) {
+        expect(err).to.be.an.instanceof(Error)
+        expect(err.message).to.equal('Must provide a photo media parameter for all Instagram service profiles')
+        expect(err.httpCode).to.equal(400)
+        expect(err.errorCode).to.equal(1004)
+
+        done()
+      }
+    )
+  })
+
+  it('returns an error for success false even if HTTP 200', function (done) {
+    this.api.runRequest.restore();
+    sinon.stub(this.api, 'runRequest', function (options, callback) {
+      callback(null, {statusCode: 200}, JSON.stringify(
+        {
+          "success":false,
+          "message":"Must provide a photo media parameter for all Instagram service profiles",
+          "code":1004
+        }
+      ))
+    })
+
+    this.api.createRequest('get', 'test').then(
+      function () {
+      },
+      function (err) {
+        expect(err).to.be.an.instanceof(Error)
+        expect(err.message).to.equal('Must provide a photo media parameter for all Instagram service profiles')
+        expect(err.httpCode).to.equal(200)
+        expect(err.errorCode).to.equal(1004)
+
+        done()
+      }
+    )
+  })  
 })
