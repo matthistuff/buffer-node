@@ -1,5 +1,5 @@
 var expect = require('chai').expect,
-  bufferAPI = require('../index')
+  bufferAPI = require('..')
 
 describe('bufferAPI helper functions', function () {
   beforeEach(function (done) {

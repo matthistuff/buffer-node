@@ -1,6 +1,6 @@
 var expect = require('chai').expect,
   sinon = require('sinon'),
-  bufferAPI = require('../index')
+  bufferAPI = require('..')
 
 describe('bufferAPI core functions', function () {
   beforeEach(function (done) {
