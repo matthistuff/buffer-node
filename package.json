@@ -21,7 +21,12 @@
     "bufferapp"
   ],
   "dependencies": {
-    "lodash": "~4.17.4",
+    "lodash.assign": "~4.2.0",
+    "lodash.isarray": "~4.0.0",
+    "lodash.isdate": "~4.0.1",
+    "lodash.merge": "~4.6.0",
+    "lodash.omit": "~4.5.0",
+    "lodash.pick": "~4.4.0",
     "promise": "~7.1.1",
     "request": "~2.81.0"
   },
