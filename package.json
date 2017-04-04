@@ -21,16 +21,16 @@
     "bufferapp"
   ],
   "dependencies": {
-    "lodash": "^2.4.1",
-    "promise": "^5.0.0",
-    "request": "^2.39.0"
+    "lodash": "~2.4.1",
+    "promise": "~5.0.0",
+    "request": "~2.39.0"
   },
   "devDependencies": {
-    "chai": "^1.9.1",
+    "chai": "~1.9.1",
     "codeclimate-test-reporter": "0.0.3",
-    "istanbul": "^0.3.0",
-    "mocha": "^1.21.1",
-    "sinon": "^1.10.3"
+    "istanbul": "~0.3.0",
+    "mocha": "~1.21.1",
+    "sinon": "~1.10.3"
   },
   "engines": [
     "node >= 0.8.0"
