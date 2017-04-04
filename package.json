@@ -18,6 +18,9 @@
     "bufferapp",
     "buffer"
   ],
+  "files": [
+    "lib"
+  ],
   "author": "Matthias Thiel <mail@matthiasthiel.com>",
   "license": "MIT",
   "bugs": {
