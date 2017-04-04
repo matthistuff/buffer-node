@@ -1,32 +1,25 @@
 {
   "name": "buffer-node",
-  "version": "1.0.2",
   "description": "API client for bufferapp.com",
-  "engines": [
-    "node >= 0.8.0"
-  ],
+  "homepage": "https://github.com/matthistuff/buffer-node",
+  "version": "1.0.3",
   "main": "./lib/buffer-api",
-  "scripts": {
-    "test": "./node_modules/.bin/mocha tests/*.js"
+  "author": {
+    "email": "mail@matthiasthiel.com",
+    "name": "Matthias Thiel"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/matthistuff/buffer-node"
+    "url": "git+https://github.com/matthistuff/buffer-node.git"
   },
-  "keywords": [
-    "api",
-    "bufferapp",
-    "buffer"
-  ],
-  "files": [
-    "lib"
-  ],
-  "author": "Matthias Thiel <mail@matthiasthiel.com>",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/matthistuff/buffer-node/issues"
   },
-  "homepage": "https://github.com/matthistuff/buffer-node",
+  "keywords": [
+    "api",
+    "buffer",
+    "bufferapp"
+  ],
   "dependencies": {
     "lodash": "^2.4.1",
     "promise": "^5.0.0",
@@ -38,5 +31,15 @@
     "istanbul": "^0.3.0",
     "mocha": "^1.21.1",
     "sinon": "^1.10.3"
-  }
+  },
+  "engines": [
+    "node >= 0.8.0"
+  ],
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "./node_modules/.bin/mocha tests/*.js"
+  },
+  "license": "MIT"
 }
